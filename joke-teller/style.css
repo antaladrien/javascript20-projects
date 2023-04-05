@@ -1,0 +1,123 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #4db6ac;
+}
+
+button {
+	cursor: pointer;
+	font-family: Courier, monospace;
+	background-color: aquamarine;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background: url('./robot.gif');
+	background-size: 70%;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+#button {
+	outline: none;
+	width: 250px;
+	height: 50px;
+	font-size: 20px;
+	color: white;
+	background: #ff3482;
+	border: none;
+	margin: 100px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+#button:hover {
+	filter: brightness(95%);
+}
+
+#button:active {
+	transform: scale(0.98);
+}
+
+#button:disabled {
+	cursor: default;
+	filter: brightness(30%);
+}
+
+.language {
+	position: fixed;
+	top: 2rem;
+	right: calc(30vw);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 15rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.language-button {
+	font-size: 90%;
+	padding: 0.5rem;
+	width: 50%;
+	text-align: center;
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (min-width: 1200px) {
+	.container {
+		flex-direction: column;
+		justify-content: center;
+		background-position: left;
+		background-size: 50%;
+	}
+
+	.language {
+		width: 40vw;
+		right: calc(30vw);
+		border-radius: 1rem;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.container {
+		flex-direction: column;
+		justify-content: flex-end;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.language {
+		width: 40vw;
+		right: calc(30vw);
+		border-radius: 2rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+		background-position: center center;
+		background-size: auto;
+	}
+
+	#button {
+		width: 200px;
+		font-size: 18px;
+	}
+
+	.language {
+		width: 100vw;
+		border-radius: 0;
+		right: 0;
+	}
+}
